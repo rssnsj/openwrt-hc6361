@@ -1,0 +1,6 @@
+openwrt-ar71xx
+s_check_hostdeps
+s_checkout_svn
+s_hiwifi_patch
+s_install_feeds
+s_update_feeds

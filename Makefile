@@ -4,7 +4,8 @@ hiwifi_root = $(shell pwd)
 openwrt_dir = openwrt-ar71xx
 packages_required = build-essential git flex gettext libncurses5-dev \
   unzip gawk liblzma-dev u-boot-tools
-openwrt_feeds = libevent2 luci luci-app-radvd luci-app-samba xl2tpd
+openwrt_feeds = libevent2 luci luci-app-radvd luci-app-samba xl2tpd pptpd
+### mwan3 luci-app-mwan3
 
 #final: s_build_openwrt
 #	make -C recovery.bin
@@ -20,16 +21,20 @@ s_build_openwrt: s_install_feeds
 
 s_install_feeds: s_update_feeds
 	@cd $(openwrt_dir); ./scripts/feeds install $(openwrt_feeds);
-	@svn co svn://svn.openwrt.org/openwrt/packages/net/pptpd $(openwrt_dir)/package/pptpd
-	@svn co https://github.com/madeye/shadowsocks-libev.git/tags/v1.4.8/openwrt $(openwrt_dir)/package/shadowsocks
-	@svn co https://proto-bridge.googlecode.com/svn/trunk/proto-bridge $(openwrt_dir)/package/proto-bridge
+	@svn co https://github.com/shadowsocks/shadowsocks-libev.git/tags/v1.6.2/openwrt $(openwrt_dir)/package/shadowsocks
+	@git clone https://github.com/rssnsj/proto-bridge.git -b master $(openwrt_dir)/package/proto-bridge
 	@cd $(openwrt_dir)/package; \
 	 [ -d ../../../hc5761/package/xt_salist -a ! -e xt_salist ] && ln -sf ../../../hc5761/package/xt_salist || :
 	@touch s_install_feeds
 
-s_update_feeds: s_checkout_svn
+s_update_feeds: s_hiwifi_patch
 	@cd $(openwrt_dir); ./scripts/feeds update;
 	@touch s_update_feeds
+
+s_hiwifi_patch: s_checkout_svn
+	@cd $(openwrt_dir); patch -p0 < ../hiwifi-hc6361.patch
+	@cp -vf config-hiwifi-hc6361 $(openwrt_dir)/.config
+	@touch s_hiwifi_patch
 
 # 2. Checkout source code:
 s_checkout_svn: s_check_hostdeps
