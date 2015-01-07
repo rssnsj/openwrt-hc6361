@@ -221,13 +221,13 @@ CONFIG_EXTERNAL_CPIO=""
 # Root filesystem archives
 #
 # CONFIG_TARGET_ROOTFS_CPIOGZ is not set
-CONFIG_TARGET_ROOTFS_TARGZ=y
+# CONFIG_TARGET_ROOTFS_TARGZ is not set
 
 #
 # Root filesystem images
 #
 # CONFIG_TARGET_ROOTFS_EXT4FS is not set
-CONFIG_TARGET_ROOTFS_JFFS2=y
+# CONFIG_TARGET_ROOTFS_JFFS2 is not set
 CONFIG_TARGET_ROOTFS_SQUASHFS=y
 CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
 CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
@@ -1506,7 +1506,7 @@ CONFIG_PACKAGE_kmod-nls-base=y
 # CONFIG_PACKAGE_kmod-arptables is not set
 # CONFIG_PACKAGE_kmod-ebtables is not set
 CONFIG_PACKAGE_kmod-ip6tables=y
-# CONFIG_PACKAGE_kmod-ip6tables-extra is not set
+CONFIG_PACKAGE_kmod-ip6tables-extra=y
 # CONFIG_PACKAGE_kmod-ipt-account is not set
 # CONFIG_PACKAGE_kmod-ipt-chaos is not set
 # CONFIG_PACKAGE_kmod-ipt-compat-xtables is not set
@@ -1518,7 +1518,7 @@ CONFIG_PACKAGE_kmod-ipt-core=y
 # CONFIG_PACKAGE_kmod-ipt-delude is not set
 # CONFIG_PACKAGE_kmod-ipt-dhcpmac is not set
 # CONFIG_PACKAGE_kmod-ipt-dnetmap is not set
-# CONFIG_PACKAGE_kmod-ipt-extra is not set
+CONFIG_PACKAGE_kmod-ipt-extra=y
 # CONFIG_PACKAGE_kmod-ipt-filter is not set
 # CONFIG_PACKAGE_kmod-ipt-fuzzy is not set
 # CONFIG_PACKAGE_kmod-ipt-geoip is not set
@@ -1529,18 +1529,18 @@ CONFIG_PACKAGE_kmod-ipt-ipopt=y
 # CONFIG_PACKAGE_kmod-ipt-ipp2p is not set
 # CONFIG_PACKAGE_kmod-ipt-iprange is not set
 # CONFIG_PACKAGE_kmod-ipt-ipsec is not set
-# CONFIG_PACKAGE_kmod-ipt-ipset is not set
+CONFIG_PACKAGE_kmod-ipt-ipset=y
 # CONFIG_PACKAGE_kmod-ipt-ipv4options is not set
 # CONFIG_PACKAGE_kmod-ipt-led is not set
 # CONFIG_PACKAGE_kmod-ipt-length2 is not set
 # CONFIG_PACKAGE_kmod-ipt-logmark is not set
 # CONFIG_PACKAGE_kmod-ipt-lscan is not set
-# CONFIG_PACKAGE_kmod-ipt-lua is not set
+CONFIG_PACKAGE_kmod-ipt-lua=y
 CONFIG_PACKAGE_kmod-ipt-nat=y
-# CONFIG_PACKAGE_kmod-ipt-nat-extra is not set
+CONFIG_PACKAGE_kmod-ipt-nat-extra=y
 CONFIG_PACKAGE_kmod-ipt-nat6=y
 CONFIG_PACKAGE_kmod-ipt-nathelper=y
-CONFIG_PACKAGE_kmod-ipt-nathelper-extra=y
+# CONFIG_PACKAGE_kmod-ipt-nathelper-extra is not set
 # CONFIG_PACKAGE_kmod-ipt-nathelper-rtsp is not set
 # CONFIG_PACKAGE_kmod-ipt-nflog is not set
 # CONFIG_PACKAGE_kmod-ipt-nfqueue is not set
@@ -1557,7 +1557,7 @@ CONFIG_PACKAGE_kmod-ipt-nathelper-extra=y
 # CONFIG_PACKAGE_kmod-ipt-u32 is not set
 # CONFIG_PACKAGE_kmod-ipt-ulog is not set
 # CONFIG_PACKAGE_kmod-nf-conntrack-netlink is not set
-# CONFIG_PACKAGE_kmod-nfnetlink is not set
+CONFIG_PACKAGE_kmod-nfnetlink=y
 # CONFIG_PACKAGE_kmod-nfnetlink-log is not set
 # CONFIG_PACKAGE_kmod-nfnetlink-queue is not set
 CONFIG_PACKAGE_kmod-salist=y
@@ -1584,7 +1584,7 @@ CONFIG_PACKAGE_kmod-salist=y
 # CONFIG_PACKAGE_kmod-hfcpci is not set
 # CONFIG_PACKAGE_kmod-ifb is not set
 # CONFIG_PACKAGE_kmod-libphy is not set
-# CONFIG_PACKAGE_kmod-macvlan is not set
+CONFIG_PACKAGE_kmod-macvlan=y
 # CONFIG_PACKAGE_kmod-mii is not set
 # CONFIG_PACKAGE_kmod-natsemi is not set
 # CONFIG_PACKAGE_kmod-ne2k-pci is not set
@@ -1612,22 +1612,22 @@ CONFIG_PACKAGE_kmod-salist=y
 #
 # Network Support
 #
-CONFIG_PACKAGE_kmod-8021q=y
+# CONFIG_PACKAGE_kmod-8021q is not set
 # CONFIG_PACKAGE_kmod-appletalk is not set
 # CONFIG_PACKAGE_kmod-atm is not set
 # CONFIG_PACKAGE_kmod-ax25 is not set
 # CONFIG_PACKAGE_kmod-bonding is not set
 # CONFIG_PACKAGE_kmod-bridge is not set
 # CONFIG_PACKAGE_kmod-capi is not set
-# CONFIG_PACKAGE_kmod-dnsresolver is not set
+CONFIG_PACKAGE_kmod-dnsresolver=y
 CONFIG_PACKAGE_kmod-gre=y
 # CONFIG_PACKAGE_kmod-gre6 is not set
-# CONFIG_PACKAGE_kmod-ip6-tunnel is not set
+CONFIG_PACKAGE_kmod-ip6-tunnel=y
 CONFIG_PACKAGE_kmod-ipip=y
 # CONFIG_PACKAGE_kmod-ipsec is not set
 CONFIG_PACKAGE_kmod-iptunnel=y
 CONFIG_PACKAGE_kmod-iptunnel4=y
-# CONFIG_PACKAGE_kmod-iptunnel6 is not set
+CONFIG_PACKAGE_kmod-iptunnel6=y
 CONFIG_PACKAGE_kmod-ipv6=y
 # CONFIG_PACKAGE_kmod-isdn4linux is not set
 CONFIG_PACKAGE_kmod-l2tp=y
@@ -1892,7 +1892,7 @@ CONFIG_PACKAGE_libpolarssl=y
 # CONFIG_PACKAGE_pgsqlodbc is not set
 # CONFIG_PACKAGE_unixodbc is not set
 # CONFIG_PACKAGE_alsa-lib is not set
-# CONFIG_PACKAGE_libblkid is not set
+CONFIG_PACKAGE_libblkid=y
 CONFIG_PACKAGE_libblobmsg-json=y
 # CONFIG_PACKAGE_libbz2 is not set
 # CONFIG_PACKAGE_libcharset is not set
@@ -1960,7 +1960,7 @@ CONFIG_PACKAGE_libjson-c=y
 # CONFIG_PACKAGE_libltdl is not set
 CONFIG_PACKAGE_liblua=y
 CONFIG_PACKAGE_liblzo=y
-# CONFIG_PACKAGE_libmnl is not set
+CONFIG_PACKAGE_libmnl=y
 # CONFIG_PACKAGE_libmount is not set
 # CONFIG_PACKAGE_libmysqlclient is not set
 # CONFIG_PACKAGE_libmysqlclient-r is not set
@@ -2052,7 +2052,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-ltqtapi is not set
 # CONFIG_PACKAGE_luci-app-meshwizard is not set
 # CONFIG_PACKAGE_luci-app-mmc-over-gpio is not set
-CONFIG_PACKAGE_luci-app-multiwan=y
+# CONFIG_PACKAGE_luci-app-multiwan is not set
 # CONFIG_PACKAGE_luci-app-ntpc is not set
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
@@ -2115,7 +2115,7 @@ CONFIG_PACKAGE_luci-i18n-english=y
 # CONFIG_PACKAGE_luci-proto-3g is not set
 CONFIG_PACKAGE_luci-proto-ipv6=y
 CONFIG_PACKAGE_luci-proto-ppp=y
-# CONFIG_PACKAGE_luci-proto-relay is not set
+CONFIG_PACKAGE_luci-proto-relay=y
 
 #
 # 8. Libraries
@@ -2189,8 +2189,8 @@ CONFIG_PACKAGE_curl=y
 # CONFIG_PACKAGE_conntrack-tools is not set
 # CONFIG_PACKAGE_ebtables is not set
 CONFIG_PACKAGE_ip6tables=y
-# CONFIG_PACKAGE_ip6tables-extra is not set
-# CONFIG_PACKAGE_ip6tables-mod-nat is not set
+CONFIG_PACKAGE_ip6tables-extra=y
+CONFIG_PACKAGE_ip6tables-mod-nat=y
 CONFIG_PACKAGE_iptables=y
 # CONFIG_PACKAGE_iptables-mod-account is not set
 # CONFIG_PACKAGE_iptables-mod-chaos is not set
@@ -2199,7 +2199,7 @@ CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
 # CONFIG_PACKAGE_iptables-mod-delude is not set
 # CONFIG_PACKAGE_iptables-mod-dhcpmac is not set
 # CONFIG_PACKAGE_iptables-mod-dnetmap is not set
-# CONFIG_PACKAGE_iptables-mod-extra is not set
+CONFIG_PACKAGE_iptables-mod-extra=y
 # CONFIG_PACKAGE_iptables-mod-filter is not set
 # CONFIG_PACKAGE_iptables-mod-fuzzy is not set
 # CONFIG_PACKAGE_iptables-mod-geoip is not set
@@ -2215,8 +2215,8 @@ CONFIG_PACKAGE_iptables-mod-ipopt=y
 # CONFIG_PACKAGE_iptables-mod-length2 is not set
 # CONFIG_PACKAGE_iptables-mod-logmark is not set
 # CONFIG_PACKAGE_iptables-mod-lscan is not set
-# CONFIG_PACKAGE_iptables-mod-lua is not set
-# CONFIG_PACKAGE_iptables-mod-nat-extra is not set
+CONFIG_PACKAGE_iptables-mod-lua=y
+CONFIG_PACKAGE_iptables-mod-nat-extra=y
 # CONFIG_PACKAGE_iptables-mod-nflog is not set
 # CONFIG_PACKAGE_iptables-mod-nfqueue is not set
 # CONFIG_PACKAGE_iptables-mod-psd is not set
@@ -2407,7 +2407,7 @@ CONFIG_PACKAGE_hostapd-common=y
 CONFIG_PACKAGE_iftop=y
 # CONFIG_PACKAGE_iperf is not set
 CONFIG_PACKAGE_iperf-mt=y
-# CONFIG_PACKAGE_ipset is not set
+CONFIG_PACKAGE_ipset=y
 # CONFIG_PACKAGE_ipset-dns is not set
 # CONFIG_PACKAGE_iputils-arping is not set
 # CONFIG_PACKAGE_iputils-clockdiff is not set
@@ -2421,7 +2421,7 @@ CONFIG_PACKAGE_iw=y
 # CONFIG_PACKAGE_mac-to-devinfo is not set
 # CONFIG_PACKAGE_map is not set
 # CONFIG_PACKAGE_mdns is not set
-CONFIG_PACKAGE_multiwan=y
+# CONFIG_PACKAGE_multiwan is not set
 # CONFIG_PACKAGE_netdiscover is not set
 # CONFIG_PACKAGE_netdiscover-to-devinfo is not set
 # CONFIG_PACKAGE_noping is not set
@@ -2526,7 +2526,7 @@ CONFIG_PACKAGE_e2fsprogs=y
 #
 # CONFIG_PACKAGE_blkid is not set
 # CONFIG_PACKAGE_cfdisk is not set
-# CONFIG_PACKAGE_fdisk is not set
+CONFIG_PACKAGE_fdisk=y
 # CONFIG_PACKAGE_findfs is not set
 # CONFIG_PACKAGE_hd-idle is not set
 # CONFIG_PACKAGE_lsblk is not set
@@ -2564,7 +2564,7 @@ CONFIG_PACKAGE_libjson-script=y
 # CONFIG_PACKAGE_mcookie is not set
 # CONFIG_PACKAGE_mdadm is not set
 # CONFIG_PACKAGE_mount-utils is not set
-CONFIG_PACKAGE_mountd=y
+# CONFIG_PACKAGE_mountd is not set
 # CONFIG_PACKAGE_namei is not set
 # CONFIG_PACKAGE_ocf-crypto-headers is not set
 # CONFIG_PACKAGE_openssl-util is not set
