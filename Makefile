@@ -62,6 +62,5 @@ menuconfig: s_install_feeds
 
 clean:
 	rm -f s_build_openwrt
-	make clean -C recovery.bin
 	make clean -C $(openwrt_dir) V=s
 
