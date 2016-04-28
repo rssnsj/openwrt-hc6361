@@ -13,7 +13,7 @@ HC6361: .install_feeds
 			echo "WARNING: .config is updated, backed up as '.config.bak'"; \
 		fi; \
 		cp -vf ../config-hiwifi-hc6361 .config
-	make -C $(openwrt_dir) V=s -j4
+	make -C $(openwrt_dir) V=s -j$(shell grep ^processor /proc/cpuinfo | wc -l)
 
 recovery.bin: HC6361
 	make -C recovery.bin
@@ -35,7 +35,8 @@ recovery.bin: HC6361
 
 # 2. Checkout source code:
 .checkout_svn: .check_hostdeps
-	svn co svn://svn.openwrt.org/openwrt/branches/barrier_breaker $(openwrt_dir) -r43166
+#	svn co svn://svn.openwrt.org/openwrt/branches/barrier_breaker $(openwrt_dir) -r43166 || :
+	git clone git://git.openwrt.org/14.07/openwrt.git $(openwrt_dir)
 	@[ -d /var/dl ] && ln -sf /var/dl $(openwrt_dir)/dl || :
 	@touch .checkout_svn
 
